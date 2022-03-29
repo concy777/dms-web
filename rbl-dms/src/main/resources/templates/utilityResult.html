@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+    #logindiv {
+        position: fixed;
+        top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+    }
+    
+</style>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DMS | Utility </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body class="gray-bg">
+
+    <div  class="middle-box text-center loginscreen animated fadeInDown">
+        <div >
+			<div  class="logindiv">
+
+                <h3 class="header-portion"></h3>
+                
+                
+
+            </div>
+
+                <div  class="ibox-content">
+                <div >
+
+                <h2 class="header-portion"><i class="fa fa-user" aria-hidden="true"></i></h2>
+                </div>
+                <div>
+                <h3 class="text-center mb-4"><b>Utility</b></h3>
+
+            <div class="wrapper wrapper-content">
+              <div class="middle-box text-center">
+<h3 class="font-bold" th:if="${message != null}" th:utext="${message}" style="color: red;"></h3>
+    </div>
+            </div>
+        
+        </div>
+        
+    
+
+</body>
+
+</html>

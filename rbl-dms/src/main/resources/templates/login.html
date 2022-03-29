@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style type="text/css">
+    #logindiv {
+        position: fixed;
+        top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+    }
+    
+</style>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DMS | Login </title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="/css/animate.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #304087" class="gray-bg">
+
+    <div  class="middle-box text-center loginscreen animated fadeInDown">
+        <div >
+			<div  class="logindiv">
+
+                <h3 class="header-portion"></h3>
+                
+                
+
+            </div>
+
+
+      <div class="alert alert-danger" role="alert"  th:if="${#request.getParameter('error') == 'true'}"
+            style="color:red;margin:10px 0px;text-align: center">
+         Bad Credentials!!!<br />
+      </div>
+      
+      <div class="alert alert-danger" role="alert"  th:if="${#request.getParameter('invalid-session') == 'true'}"
+            style="color:red;margin:10px 0px;text-align: center">
+         Session Expired. Please login again to continue.<br />
+      </div>
+      
+      
+                <div  class="ibox-content">
+                <div >
+
+                <h2 class="header-portion"><i class="fa fa-user" aria-hidden="true"></i></h2>
+                </div>
+                <div>
+                <h3 class="text-center mb-4"><b>Sign In</b></h3>
+
+            </div>
+                    <form class="m-t" role="form" autocomplete="off" name='f' th:action="@{/loginApp}" method='POST'>
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password"  class="form-control" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                    </form>
+                    
+                    <div class="error-desc">
+
+     
+              <div class="middle-box text-center animated fadeInDown">
+        
+<h3 class="font-bold" th:if="${message != null}" th:utext="${message}" style="color: red;"></h3>
+        
+    </div>
+               </div>
+                     
+                   </div>
+            </div>
+        
+        </div>
+        
+    
+
+</body>
+
+</html>

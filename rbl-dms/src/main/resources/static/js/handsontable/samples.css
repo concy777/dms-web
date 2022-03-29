@@ -1,0 +1,14 @@
+/*This file is only needed for demo purposes in demo/ subdirectory */
+
+html {
+  height: 100%;
+}
+.clear {
+  clear: left;
+}
+.button-google-groups:hover {
+  background-color: #BC2520;
+}
+.th{
+ background-color: #BC2520;
+}
